@@ -5,9 +5,6 @@ type camera_persist_file, file_type;
 # Display
 type vendor_sysfs_display, fs_type, sysfs_type;
 
-# Dolby Vision
-type vendor_sysfs_graphics, fs_type, sysfs_type;
-
 # DMA-BUF
 type vendor_dmabuf, fs_type;
 

@@ -23,7 +23,6 @@ persist.audio.button_jack.profile=volume
 persist.audio.button_jack.switch=0
 persist.vendor.audio.misound.disable=true
 ro.vendor.audio.bluetooth.support.misound=false
-ro.vendor.audio.device.dbcom=dolby_common
 ro.vendor.audio.game.effect=true
 ro.vendor.audio.hifi=false
 ro.vendor.audio.ring.filter=true
@@ -174,10 +173,6 @@ ro.vendor.smvr.p2batch.hd=8
 ro.vendor.smvr.p2batch.vga=16
 debug.hwui.skia_tracing_enabled=false
 debug.hwui.skia_use_perfetto_track_events=false
-
-# Dolby
-ro.vendor.audio.dolby.vision.support=true
-ro.vendor.display.dolbyvision.support=true
 
 # DRM
 ro.netflix.bsp_rev=MTK6877-33678-1
