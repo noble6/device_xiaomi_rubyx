@@ -82,6 +82,21 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     frameworks/av/services/audiopolicy/config/r_submix_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/r_submix_audio_policy_configuration.xml
 
+# Strand engine: strandd, the Strand app and the Resona sound engine
+# (libresonafx, registered in configs/audio/audio_effects.xml)
+STRAND_DEVICE_CONFIG := $(DEVICE_PATH)/configs/strand/device.conf
+$(call inherit-product, vendor/strand/strand.mk)
+
+PRODUCT_SYSTEM_EXT_PROPERTIES += \
+    ro.strand.maintainer=4-8-2-1-1-7
+
+# Factory speaker calibration for Resona, converted from the stock DAX tuning
+# with vendor/strand/audio/tools/dax2resona.py. Strand picks the Pro+ file
+# by ro.boot.product.hardware.sku=rubypro.
+PRODUCT_COPY_FILES += \
+    $(DEVICE_PATH)/configs/strand/resona_speaker.json:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/strand/resona_speaker.json \
+    $(DEVICE_PATH)/configs/strand/resona_speaker_rubypro.json:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/strand/resona_speaker_rubypro.json
+
 # Boot animation
 TARGET_SCREEN_HEIGHT := 2400
 TARGET_SCREEN_WIDTH := 1080
@@ -142,9 +157,6 @@ PRODUCT_PACKAGES += \
     android.hardware.memtrack-service.mediatek
 
 $(call soong_config_set_bool,stagefright,target_disable_thumbnail_block_model,true)
-
-# Dolby
-$(call inherit-product, hardware/dolby/dolby.mk)
 
 # DRM
 PRODUCT_PACKAGES += \

@@ -1,0 +1,4 @@
+# Strand (vendor/strand): GPU load from GED. Battery stats are off limits
+# to platform domains (health HAL only).
+allow strandd sysfs_ged:dir r_dir_perms;
+allow strandd sysfs_ged:file r_file_perms;
