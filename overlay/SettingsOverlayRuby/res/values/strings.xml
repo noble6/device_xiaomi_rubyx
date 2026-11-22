@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <!-- Unofficial build: show its own maintainer, not crDroid's OTA entry for rubyx -->
+    <string name="build_maintainer_summary" translatable="false">4-8-2-1-1-7</string>
+</resources>
