@@ -309,4 +309,4 @@ debug.hwui.use_hint_manager=true
 debug.hwui.use_buffer_age=true
 
 # RenderEngine
-debug.renderengine.blur_algorithm=kawase_darkmoon
+debug.renderengine.blur_algorithm=strand
